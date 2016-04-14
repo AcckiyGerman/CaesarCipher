@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caesar cipher</title>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class='wrapper'>
+	<header>
+        <h1 align="center">AVE CAESAR! AVE ROME!</h1>
+        <h2 align="center">Шифр Цезаря</h2>
+        <p>Шифр Цезаря один из наиболее древнейших известных шифров. Схема шифрования очень проста -
+            используется сдвиг буквы алфавита на фиксированное число позиций. Используемое преобразование обычно
+            обозначают как ROTN, где N - сдвиг, ROT - сокращение от слова ROTATE, в данном случае “циклический
+            сдвиг”.</p>
+        <br>
+        <p>Попробуйте поиграться с шифром Цезаря. (используйте АНГЛИЙСКИЙ ЯЗЫК)</p>
+    </header>
+
+    <main>
+        <div class="workwindow">
+            <table class="inputtable" border="0">
+                <tr>
+                    <td>
+                        <textarea id="inputText" rows="10" cols="50" onchange=sendData()>
+    Enter text you want to encode here.
+                        </textarea>
+                    </td>
+                    <td align="center">
+                        <label>
+                            ROT<input type="text" id='ROTATE' value="0" pattern="\d{1,2}"
+                            maxlength='2' style="width:18px;" title="ONLY NUMERALS">
+                        </label>
+                        <hr color="orange">
+                        <label>
+                            Encode
+                            <input type='radio' name="encode-decode" value="encode" id="ENCODE" checked>
+                        </label>
+                        <label>
+                            Decode
+                            <input type='radio' name="encode-decode" value="decode" id="DECODE">
+                        </label>
+                        <hr color="orange">
+                        <input type="submit" id='COPY' value="<- copy <-">
+                    </td>
+                    <td>
+                        <textarea id="outputText" rows="10" cols="50" readonly="true">
+    There will be encoded text.
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+            <div align="center">
+                <canvas id='Canvas' width='800' height='200'></canvas>
+            </div>
+            <hr>
+Наш сервер попытается угадать, зашифровано ли сообщение, и расшифровать его.<br>
+Он отгадывает только английские сообщения, но угадывает неплохо:
+            <textarea id="tryToGuess" rows="6" cols="120" readonly="true">
+            </textarea>
+        </div>
+	</main>
+
+	<footer>
+        <p>Made by Dmytro Gierman for <a href="http://light-it.net/">Light-IT</a>
+        </p>
+    </footer>
+</div>
+<script src='frontend.js'></script>
+</body>
+</html>

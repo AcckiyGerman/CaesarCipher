@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+}
+.workwindow {
+padding: 10px;
+}
+
+.inputtable {
+width: 100%;
+}
+
+header {
+	background-color: orange;
+	text-align: left;
+	min-height: 60px;
+	padding: 10px;
+}
+
+main {
+	background-color: #CCC;
+	display: table-row;
+	height: 100%;
+}
+
+footer {
+	background-color: #AAF;
+	min-height: 60px;
+	padding: 10px;
+}
